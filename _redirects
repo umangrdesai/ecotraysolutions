@@ -1,5 +1,0 @@
-# Cloudflare Pages redirects
-# Clean URL support — /about → /about.html
-/about          /about.html          301
-/testimonials   /testimonials.html   301
-/contact        /contact.html        301
