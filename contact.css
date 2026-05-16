@@ -1,0 +1,222 @@
+/* ============================================================
+   ECO TRAY SOLUTIONS — CONTACT PAGE STYLES
+   ============================================================ */
+
+/* ── CONTACT LAYOUT ──────────────────────────────────────── */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--space-10);
+  align-items: flex-start;
+}
+
+/* ── FORM CARD ───────────────────────────────────────────── */
+.contact-form-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-10);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-gray-200);
+}
+
+.contact-form-card__title {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  margin-bottom: var(--space-2);
+}
+
+.contact-form-card__subtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-8);
+}
+
+.contact-form__submit {
+  width: 100%;
+  justify-content: center;
+  margin-top: var(--space-2);
+  font-size: var(--font-size-lg);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+}
+
+.contact-form__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.contact-form__note {
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  margin-top: var(--space-4);
+  font-weight: 500;
+}
+
+/* Form messages */
+.form-message {
+  margin-top: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+}
+
+.form-message--success {
+  background: #e8f5e9;
+  border: 1px solid #a5d6a7;
+  color: #2e7d32;
+}
+
+.form-message--error {
+  background: #ffebee;
+  border: 1px solid #ef9a9a;
+  color: #c62828;
+}
+
+.form-message--error a {
+  color: #c62828;
+  text-decoration: underline;
+}
+
+/* Validation states */
+.form-input.invalid,
+.form-select.invalid,
+.form-textarea.invalid {
+  border-color: #E53E3E;
+  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.12);
+}
+
+.form-input.valid,
+.form-select.valid,
+.form-textarea.valid {
+  border-color: var(--color-primary-light);
+}
+
+.field-error {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: #E53E3E;
+  margin-top: var(--space-1);
+}
+
+/* ── SIDEBAR ─────────────────────────────────────────────── */
+.contact-sidebar {
+  position: sticky;
+  top: calc(var(--nav-height) + var(--space-6));
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.contact-info-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-gray-200);
+}
+
+.contact-info-card h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-6);
+  color: var(--color-black);
+}
+
+.contact-steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.contact-steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.contact-step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: var(--font-size-xs);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-steps li div strong {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+
+.contact-steps li div p {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Assurance card */
+.contact-assurance-card {
+  background: linear-gradient(135deg, #f0faf0, #e8f5e9);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  border: 1px solid var(--color-accent);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.contact-assurance-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.contact-assurance-item span {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.contact-assurance-item p {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-form-card {
+    padding: var(--space-6);
+  }
+
+  .phone-input-group {
+    flex-direction: column;
+  }
+
+  .phone-country-select {
+    width: 100%;
+  }
+}

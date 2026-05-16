@@ -1,0 +1,8 @@
+# Cloudflare Pages redirects
+# Clean URL support — /about → /about.html
+/about          /about.html          200
+/testimonials   /testimonials.html   200
+/contact        /contact.html        200
+
+# 404 fallback
+/*              /index.html          404

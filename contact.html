@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Eco Tray Solutions — Get a custom packaging quote in 24–48 hours." />
+  <title>Contact Us | Eco Tray Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══════════════════════════════════════════════ -->
+  <header class="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Eco Tray Solutions Home">
+        <img src="assets/images/logo.jpeg" alt="Eco Tray Solutions Logo" class="navbar__logo-img" />
+        <div class="navbar__logo-text">
+          <span>EcoTray Solutions</span>
+          <span>Global Packaging</span>
+        </div>
+      </a>
+      <nav class="navbar__nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html"        class="navbar__link">Home</a>
+        <a href="about.html"        class="navbar__link">About Us</a>
+        <a href="testimonials.html" class="navbar__link">Testimonials</a>
+        <a href="contact.html"      class="navbar__link btn btn--primary navbar__cta">Get a Quote</a>
+      </nav>
+      <button class="navbar__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="navbar__mobile" id="mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html"        class="navbar__mobile-link">Home</a>
+    <a href="about.html"        class="navbar__mobile-link">About Us</a>
+    <a href="testimonials.html" class="navbar__mobile-link">Testimonials</a>
+    <div class="navbar__mobile-cta">
+      <a href="contact.html" class="btn btn--primary">Get a Quote</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ══ PAGE HERO ════════════════════════════════════════════ -->
+    <section class="page-hero" aria-label="Contact page hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>›</span>
+          <span>Contact Us</span>
+        </nav>
+        <span class="page-hero__eyebrow">Get in Touch</span>
+        <h1 class="page-hero__title">Request a Free Quote</h1>
+        <p class="page-hero__subtitle">Tell us what you need. We'll respond with a detailed, personalised quote within 24–48 hours.</p>
+      </div>
+    </section>
+
+    <!-- ══ CONTACT SECTION ═══════════════════════════════════════ -->
+    <section class="section contact-section" aria-label="Contact form">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- ── LEFT: FORM ─────────────────────────────────── -->
+          <div class="contact-form-wrap" data-animate>
+            <div class="contact-form-card">
+              <h2 class="contact-form-card__title">Tell Us About Your Project</h2>
+              <p class="contact-form-card__subtitle">Fill in the details below and our team will prepare a tailored quote for you.</p>
+
+              <form class="contact-form" id="contactForm" novalidate>
+
+                <!-- Full Name -->
+                <div class="form-group">
+                  <label class="form-label" for="fullName">
+                    Full Name <span class="required">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    class="form-input"
+                    placeholder="e.g. John Smith"
+                    required
+                    autocomplete="name"
+                  />
+                </div>
+
+                <!-- Phone with Country Code -->
+                <div class="form-group">
+                  <label class="form-label" for="phoneNumber">
+                    Contact Number <span class="required">*</span>
+                  </label>
+                  <div class="phone-input-group">
+                    <select id="countryCode" name="countryCode" class="form-select phone-country-select" aria-label="Country code">
+                      <option value="+1">🇺🇸 +1 (US)</option>
+                      <option value="+1-CA">🇨🇦 +1 (CA)</option>
+                      <option value="+44">🇬🇧 +44 (UK)</option>
+                      <option value="+61">🇦🇺 +61 (AU)</option>
+                      <option value="+91">🇮🇳 +91 (IN)</option>
+                      <option value="+971">🇦🇪 +971 (UAE)</option>
+                      <option value="+966">🇸🇦 +966 (SA)</option>
+                      <option value="+65">🇸🇬 +65 (SG)</option>
+                      <option value="+60">🇲🇾 +60 (MY)</option>
+                      <option value="+49">🇩🇪 +49 (DE)</option>
+                      <option value="+33">🇫🇷 +33 (FR)</option>
+                      <option value="+39">🇮🇹 +39 (IT)</option>
+                      <option value="+34">🇪🇸 +34 (ES)</option>
+                      <option value="+31">🇳🇱 +31 (NL)</option>
+                      <option value="+86">🇨🇳 +86 (CN)</option>
+                      <option value="+81">🇯🇵 +81 (JP)</option>
+                      <option value="+82">🇰🇷 +82 (KR)</option>
+                      <option value="+55">🇧🇷 +55 (BR)</option>
+                      <option value="+52">🇲🇽 +52 (MX)</option>
+                      <option value="+27">🇿🇦 +27 (ZA)</option>
+                      <option value="+92">🇵🇰 +92 (PK)</option>
+                      <option value="+880">🇧🇩 +880 (BD)</option>
+                      <option value="+other">🌍 Other</option>
+                    </select>
+                    <input
+                      type="tel"
+                      id="phoneNumber"
+                      name="phoneNumber"
+                      class="form-input"
+                      placeholder="Your phone number"
+                      required
+                      autocomplete="tel-national"
+                    />
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                  <label class="form-label" for="email">
+                    Email Address <span class="required">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input"
+                    placeholder="you@yourcompany.com"
+                    required
+                    autocomplete="email"
+                  />
+                  <p class="form-hint form-hint--warning">
+                    🔒 We will never spam you or sell your data to ANYONE.
+                  </p>
+                </div>
+
+                <!-- Description of Items -->
+                <div class="form-group">
+                  <label class="form-label" for="itemDescription">
+                    Description of Items Required <span class="required">*</span>
+                  </label>
+                  <textarea
+                    id="itemDescription"
+                    name="itemDescription"
+                    class="form-textarea"
+                    rows="6"
+                    placeholder="Please be as clear as possible while providing your requirement so we can provide you an accurate enough quote. (e.g. Product type, sizes, quantities, print specifications, any special requirements.)"
+                    required
+                  ></textarea>
+                </div>
+
+                <!-- Timeline Dropdown -->
+                <div class="form-group">
+                  <label class="form-label" for="timeline">
+                    Timeline for This Project <span class="required">*</span>
+                  </label>
+                  <select id="timeline" name="timeline" class="form-select" required>
+                    <option value="" disabled selected>Select a timeline…</option>
+                    <option value="0-3months">Within 0–3 months</option>
+                    <option value="3-6months">3–6 months</option>
+                    <option value="inquiring">Just inquiring</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn--primary btn--lg contact-form__submit" id="submitBtn">
+                  <span class="btn-text">Send My Enquiry</span>
+                  <span class="btn-loading" style="display:none;">Sending…</span>
+                </button>
+
+                <!-- Post-submit note -->
+                <p class="contact-form__note">
+                  ⏱ You will hear back from us with more details in 24–48 hours.
+                </p>
+
+                <!-- Success / Error Messages -->
+                <div class="form-message form-message--success" id="formSuccess" style="display:none;" role="alert">
+                  ✅ <strong>Message sent!</strong> We've received your enquiry and will be in touch within 24–48 hours. Check your email for a confirmation.
+                </div>
+                <div class="form-message form-message--error" id="formError" style="display:none;" role="alert">
+                  ❌ <strong>Something went wrong.</strong> Please try again or email us directly at <a href="mailto:info@ecotraysolutions.com">info@ecotraysolutions.com</a>.
+                </div>
+
+              </form>
+            </div>
+          </div>
+
+          <!-- ── RIGHT: SIDEBAR INFO ─────────────────────────── -->
+          <div class="contact-sidebar" data-animate data-delay="150">
+
+            <div class="contact-info-card">
+              <h3>What Happens Next?</h3>
+              <ol class="contact-steps">
+                <li>
+                  <span class="contact-step-num">1</span>
+                  <div>
+                    <strong>We review your brief</strong>
+                    <p>Our team reads your requirements and identifies the best product, material, and print options for your needs.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="contact-step-num">2</span>
+                  <div>
+                    <strong>You receive a detailed quote</strong>
+                    <p>Within 24–48 hours, expect a fully itemised quote including unit costs, shipping estimates, and lead times.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="contact-step-num">3</span>
+                  <div>
+                    <strong>Approve &amp; we produce</strong>
+                    <p>Once you're happy with the quote and artwork proof, we begin production at our certified factory partners.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="contact-step-num">4</span>
+                  <div>
+                    <strong>Delivery to your door</strong>
+                    <p>Fully tracked, fully insured, door-to-door — anywhere in the world.</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <div class="contact-assurance-card">
+              <div class="contact-assurance-item">
+                <span>🔒</span>
+                <p>Your information is kept 100% private and will never be shared with third parties.</p>
+              </div>
+              <div class="contact-assurance-item">
+                <span>⚡</span>
+                <p>24–48 hour response time guaranteed on all enquiries.</p>
+              </div>
+              <div class="contact-assurance-item">
+                <span>🌍</span>
+                <p>We handle shipping and customs for 50+ countries worldwide.</p>
+              </div>
+              <div class="contact-assurance-item">
+                <span>📦</span>
+                <p>No minimum commitment — quotes are 100% free with no obligation.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ FOOTER ════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/images/logo.jpeg" alt="Eco Tray Solutions" class="footer__brand-logo" />
+          <p class="footer__brand-desc">Global import/export specialists in custom-printed paper packaging. Door-to-door delivery. Worldwide licensing. Sustainable materials.</p>
+        </div>
+        <div>
+          <p class="footer__col-title">Quick Links</p>
+          <ul class="footer__links">
+            <li><a href="index.html"        class="footer__link">Home</a></li>
+            <li><a href="about.html"        class="footer__link">About Us</a></li>
+            <li><a href="testimonials.html" class="footer__link">Testimonials</a></li>
+            <li><a href="contact.html"      class="footer__link">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Products</p>
+          <ul class="footer__links">
+            <li><a href="contact.html" class="footer__link">Kraft Bags</a></li>
+            <li><a href="contact.html" class="footer__link">Menus &amp; Tri-Folds</a></li>
+            <li><a href="contact.html" class="footer__link">Custom Stickers</a></li>
+            <li><a href="contact.html" class="footer__link">Bespoke Orders</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Contact</p>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">✉</span>
+            <span>info@ecotraysolutions.com</span>
+          </div>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">🌐</span>
+            <span>Serving 50+ Countries Worldwide</span>
+          </div>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">⏱</span>
+            <span>Quote turnaround: 24–48 hours</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 Eco Tray Solutions LLP. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#" class="footer__bottom-link">Privacy Policy</a>
+          <a href="#" class="footer__bottom-link">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>
