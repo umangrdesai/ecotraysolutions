@@ -1,5 +1,8 @@
-# Dependencies
+# Dependencies (local dev only — Cloudflare Pages serves static files)
 node_modules/
+package.json
+package-lock.json
+server.js
 
 # Environment secrets — NEVER commit this
 .env
