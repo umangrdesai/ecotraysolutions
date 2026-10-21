@@ -684,6 +684,8 @@
 .about-photo--inset { aspect-ratio: auto; }
 .about-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .about-photo--main img { object-position: 30% center; }
+.about-photos--single { grid-template-columns: 1fr; }
+.about-photos--single .about-photo--main img { object-position: center 60%; }
 .about-photo--inset img { object-position: center 8%; position: absolute; inset: 0; }
 .about-photo figcaption {
   position: absolute; left: 0; right: 0; bottom: 0;
