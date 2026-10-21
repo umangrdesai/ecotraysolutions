@@ -186,3 +186,58 @@ node server.js
 # Install dependencies (first time or after pulling):
 npm install
 ```
+
+---
+
+## STEP 6 — Remove the Cloudflare Access lock (makes the domain public)
+
+As of Oct 2026 the site is deployed at `https://ecotraysolutions.pages.dev`, but
+`ecotraysolutions.com` redirects to a **Cloudflare Access sign-in page**
+(team domain `holy-dew-dd64.cloudflareaccess.com`). Visitors can't see the site until this is removed.
+
+1. Go to **https://one.dash.cloudflare.com** (Cloudflare Zero Trust)
+2. **Access → Applications**
+3. Find the application covering `ecotraysolutions.com` (and/or `*.ecotraysolutions.com`)
+4. Click **⋯ → Delete** (or edit its policy to **Bypass → Everyone**)
+5. Also check **Workers & Pages → ecotraysolutions → Settings → General → Access policy**;
+   if it says *Enabled*, disable it if you want `*.pages.dev` preview links public too.
+6. Open `https://ecotraysolutions.com` in a private window. You should see the site, not a login page.
+
+---
+
+## STEP 7 — Turn on customer reviews (Testimonials page)
+
+Customers submit reviews at **/testimonials.html#write-review**. Nothing is shown
+until you approve it: you get an email with **Approve & publish** / **Reject** buttons.
+
+### 7a. Create a KV namespace (stores reviews)
+Cloudflare Dashboard → **Storage & Databases → KV → Create namespace** → name it `ecotray-reviews`.
+
+### 7b. Bind it to the Pages project
+**Workers & Pages → ecotraysolutions → Settings → Bindings → Add → KV namespace**
+- Variable name: `REVIEWS`
+- KV namespace: `ecotray-reviews`
+Add it for **Production** (and Preview if you want to test there).
+
+### 7c. Add the signing secret
+**Settings → Variables and Secrets → Add**
+- Type: **Secret**
+- Name: `REVIEW_SECRET`
+- Value: any long random string (e.g. run `openssl rand -hex 32` in Terminal)
+
+`RESEND_API_KEY`, `ADMIN_EMAILS`, `FROM_EMAIL`, `FROM_NAME` are shared with the contact form,
+so approval emails go to the same inbox.
+
+### 7d. Redeploy
+**Deployments → ⋯ on latest → Retry deployment** (bindings only apply to new deployments).
+
+### How it works
+| Step | What happens |
+|---|---|
+| Customer submits | `POST /api/reviews` validates, rate-limits (3/hour per IP), blocks bots via a hidden honeypot field, stores it as **pending** in KV with IP + city |
+| You get an email | Shows the review, the private email, IP/location, plus signed Approve / Reject links |
+| You click Approve | Opens a confirmation page → click the button → review is copied to the public list |
+| Visitors | `GET /api/reviews` returns approved reviews only (no emails or IPs), newest first |
+
+Links are signed with `REVIEW_SECRET` (HMAC-SHA256), so nobody can approve a review by guessing a URL.
+To remove a published review later: KV → `ecotray-reviews` → delete the `approved:…` key.
