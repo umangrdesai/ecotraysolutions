@@ -677,3 +677,23 @@
   .certs__grid        { grid-template-columns: 1fr; }
   .about-hero__pills  { flex-direction: column; align-items: center; }
 }
+
+/* ── Team photos (replaces placeholder) ── */
+.about-photos { display: grid; grid-template-columns: 1.6fr 1fr; gap: var(--space-3); padding-bottom: 64px; }
+.about-photo { margin: 0; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); background: var(--color-gray-200); aspect-ratio: 4 / 3; }
+.about-photo--inset { aspect-ratio: auto; }
+.about-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.about-photo--main img { object-position: 30% center; }
+.about-photo--inset img { object-position: center 8%; position: absolute; inset: 0; }
+.about-photo figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 28px 12px 10px; font-size: var(--font-size-xs); font-weight: 600; color: #fff; line-height: 1.35;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0));
+}
+.about-img-badge--bottom-left { bottom: 0; left: 24px; animation-delay: 1.5s; animation-direction: alternate-reverse; }
+@media (max-width: 600px) {
+  .about-photos { grid-template-columns: 1fr; padding-bottom: 64px; }
+  .about-photo--inset { aspect-ratio: 3 / 4; }
+  .about-img-badge--top { left: -4px; }
+  .about-img-badge--bottom-left { left: 8px; }
+}
